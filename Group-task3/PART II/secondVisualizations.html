@@ -14561,7 +14561,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="THE-DEGRADATION-OF-COMMUNICATION"><strong>THE DEGRADATION OF COMMUNICATION</strong><a class="anchor-link" href="#THE-DEGRADATION-OF-COMMUNICATION">&#182;</a></h1><h4 id="Making-data-very-very-hard-to-read"><em>Making data very very hard to read</em><a class="anchor-link" href="#Making-data-very-very-hard-to-read">&#182;</a></h4><p>Using data categorizing politicians’ tweets by their target audience and content.
+The full data set can be found <a href="https://www.kaggle.com/yamqwe/classification-of-pol-sociale">here</a>, and the transformed and modified one can be found <a href="https://github.com/Brian-Masse/CSC630/blob/main/Group-task3/PART%20II/data/Political%20Tweet%20data.xlsx">here</a></p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14586,6 +14595,25 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="THE-DATA"><strong>THE DATA</strong><a class="anchor-link" href="#THE-DATA">&#182;</a></h3><p>The data set we looked at collected thousands of tweets from various politicians and assigned each of them categories. First was their target audience, or whether the tweet was intended for a <strong>political</strong> or <strong>neutral</strong> demographic.</p>
+<p>It also assigned the contents of the tweet into 1 of 6 categories, <strong>policy, attacking, information-based, mobilizing, support-based, constituency-based, or sharing general media</strong></p>
+<p>all transformations made to this data set will be explained later in context</p>
+
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="THE-INFASTRUCTURE-FOR-CONFUSION"><strong>THE INFASTRUCTURE FOR CONFUSION</strong><a class="anchor-link" href="#THE-INFASTRUCTURE-FOR-CONFUSION">&#182;</a></h3><p>First I imported / updated some of my old color classes and functions. Mainly this enables me to create / define colors in the RGB space, while also being able to use them as hex codes, which is the only code that altair supports.</p>
+<p>This color class also allows me to generate a pellet comprised of a gradient between two colors, with a specified number of steps, which was specifically helpful for assigning the color ramp of the graphs in this project</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14647,6 +14675,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>this pallet class was created specifically for this project to allow me to quickly style all the graphs in the same way. The class mainly serves to transport and group hex codes into the various outlets where I need to assign colors; it does not transform the data in any way it simply passes along strings corresponding to colors</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14681,6 +14717,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>these functions are used by each graph to apply certain styling elements, so I don’t have to repeat any formatting code, which is a problem that I had faced in some of the earlier Altair graphs that I created</p>
+<p>Each function takes in a chart and pallet class. The chart is the one to be styled while the pallet specifies what colors to use on it. This allows me to easily change the pallet for an individual graph, or change the pallet for all graphs at once</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14738,6 +14783,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="LET-THE-CONFUSION-BEGIN!"><strong>LET THE CONFUSION BEGIN!</strong><a class="anchor-link" href="#LET-THE-CONFUSION-BEGIN!">&#182;</a></h3><h3 id="GRAPH-1"><strong>GRAPH 1</strong><a class="anchor-link" href="#GRAPH-1">&#182;</a></h3><p>When I started to look for ways to present this data in misleading ways, I thought it would be fun to first identify actual patterns that exist, and then attempt to convince viewers of my visualization, the exact opposite.</p>
+<p>This brought me to my first graph, which simply, and accurately displayed the relationship between the target demographic of tweet and its assigned category. The stacked bar chart that I used also enables the comparison of these categories between each other, as well as the difference in total number of tweets in each target audience. Although this is a lot of information, with clear labels I think this is an effective graph that properly demonstrates an array of interesting relationships.</p>
+<p><strong>But that is not what we are here for.</strong></p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14841,6 +14896,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="GRAPH-2"><strong>GRAPH 2</strong><a class="anchor-link" href="#GRAPH-2">&#182;</a></h3><p>The next graph displays a similar set of data, however, instead of displaying the number of tweets for each category, it looks at that number as a percentage of the total number of tweets in that target audience. Which despite being a mouthful, creates a <strong>great lack of clarity</strong> in three important ways</p>
+<ol>
+<li>It now <em>appears</em> as if the number of tweets in the neutral and partisan audiences are equal, which is <strong>certainly not the case</strong></li>
+</ol>
+<ol>
+<li>Because the data the graph is conveying is now a percent, viewers must first understand that it is indeed a percent, instead of naturally assuming the values are directly the number of tweets in a category, but also they must understand what both the part and whole are before they can truly understand what they are reading! <strong>oh-ho! how terrible and tragic!</strong></li>
+</ol>
+<ol>
+<li>The labels now must try to explain this complex relationship, so they have become longer  and so <em>so</em> much worse. <strong>:)</strong></li>
+</ol>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14943,6 +15015,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="GRAPH-3"><strong>GRAPH 3</strong><a class="anchor-link" href="#GRAPH-3">&#182;</a></h3><p>At this point I realized I wanted to make it seem that attacking tweets were the most popular, when in actuality they are barely a category at all. To go about this, I was consdierng many ways of presenting the data, but all of them seemed <strong>just too readable!</strong> So instead settled for a good old fashion data transformation:</p>
+<h4 id="ENTER-IN-THE-MAGICAL-1-/-X"><strong>ENTER IN THE MAGICAL 1 / X</strong><a class="anchor-link" href="#ENTER-IN-THE-MAGICAL-1-/-X">&#182;</a></h4><p>I decided what better way to make the data and trends of a graph more clear than to just invert all the numbers!</p>
+<p>And so, that is exactly what I did! The following graph, an "inversion" of the first graph,  does not just present the data relationships completely  backward, but it <strong>certainly does not make it clear what transformation I used to get the data to that point :))</strong></p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15045,6 +15127,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="GRAPH-4"><strong>GRAPH 4</strong><a class="anchor-link" href="#GRAPH-4">&#182;</a></h3><p>and to top it all off, I though why not just Frankenstein the last two graphs together, so I had the inverted number of tweets of a certain category, in a certain target audience as a percentage out of the sum of all the inverted numbers of tweets in these categories.<strong>PERFECT</strong></p>
+<p>secretive: check</p>
+<p>misleading and overly long titles: check</p>
+<p>making the wrong assumptions easy and intuitive to assume: check</p>
+<p>difficult to get the actual data from the graph: CHECK!</p>
+<p>This graph perfectly combines all the terrible practices of rendering data into one, horrible, impossibly challenging data visualization. <strong>ENJOY!</strong></p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">

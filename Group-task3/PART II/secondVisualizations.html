@@ -14565,7 +14565,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="THE-DEGRADATION-OF-COMMUNICATION"><strong>THE DEGRADATION OF COMMUNICATION</strong><a class="anchor-link" href="#THE-DEGRADATION-OF-COMMUNICATION">&#182;</a></h1><h4 id="Making-data-very-very-hard-to-read"><em>Making data very very hard to read</em><a class="anchor-link" href="#Making-data-very-very-hard-to-read">&#182;</a></h4><p>Using data categorizing politicians’ tweets by their target audience and content.
+<hr>
+<h1 id="THE-DEGRADATION-OF-VISUALIZATION"><strong>THE DEGRADATION OF VISUALIZATION</strong><a class="anchor-link" href="#THE-DEGRADATION-OF-VISUALIZATION">&#182;</a></h1><hr>
+<h4 id="Making-data-very-very-hard-to-read"><em>Making data very <strong>very</strong> hard to read</em><a class="anchor-link" href="#Making-data-very-very-hard-to-read">&#182;</a></h4><p>Using data categorizing politicians’ tweets by their target audience and content.
 The full data set can be found <a href="https://www.kaggle.com/yamqwe/classification-of-pol-sociale">here</a>, and the transformed and modified one can be found <a href="https://github.com/Brian-Masse/CSC630/blob/main/Group-task3/PART%20II/data/Political%20Tweet%20data.xlsx">here</a></p>
 
 </div>
@@ -14599,7 +14601,9 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="THE-DATA"><strong>THE DATA</strong><a class="anchor-link" href="#THE-DATA">&#182;</a></h3><p>The data set we looked at collected thousands of tweets from various politicians and assigned each of them categories. First was their target audience, or whether the tweet was intended for a <strong>political</strong> or <strong>neutral</strong> demographic.</p>
+<hr>
+<h3 id="THE-DATA"><strong>THE DATA</strong><a class="anchor-link" href="#THE-DATA">&#182;</a></h3><hr>
+<p>The data set we looked at collected thousands of tweets from various politicians and assigned each of them categories. First was their target audience, or whether the tweet was intended for a <strong>political</strong> or <strong>neutral</strong> demographic.</p>
 <p>It also assigned the contents of the tweet into 1 of 6 categories, <strong>policy, attacking, information-based, mobilizing, support-based, constituency-based, or sharing general media</strong></p>
 <p>all transformations made to this data set will be explained later in context</p>
 
@@ -14609,7 +14613,9 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="THE-INFASTRUCTURE-FOR-CONFUSION"><strong>THE INFASTRUCTURE FOR CONFUSION</strong><a class="anchor-link" href="#THE-INFASTRUCTURE-FOR-CONFUSION">&#182;</a></h3><p>First I imported / updated some of my old color classes and functions. Mainly this enables me to create / define colors in the RGB space, while also being able to use them as hex codes, which is the only code that altair supports.</p>
+<hr>
+<h3 id="THE-INFRASTRUCTURE-FOR-CONFUSION"><strong>THE INFRASTRUCTURE FOR CONFUSION</strong><a class="anchor-link" href="#THE-INFRASTRUCTURE-FOR-CONFUSION">&#182;</a></h3><hr>
+<p>First I imported / updated some of my old color classes and functions. Mainly this enables me to create / define colors in the RGB space, while also being able to use them as hex codes, which is the only code that altair supports.</p>
 <p>This color class also allows me to generate a pellet comprised of a gradient between two colors, with a specified number of steps, which was specifically helpful for assigning the color ramp of the graphs in this project</p>
 
 </div>
@@ -14656,9 +14662,9 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
     <span class="k">def</span> <span class="nf">return_hex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">component</span> <span class="p">):</span>
         <span class="n">rounded</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">component</span> <span class="o">/</span> <span class="mi">16</span><span class="p">)</span>
         <span class="n">remainder</span> <span class="o">=</span> <span class="p">(</span><span class="n">component</span> <span class="o">/</span> <span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="n">rounded</span>
-
+        
         <span class="n">hex1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hex_values</span><span class="p">[</span><span class="n">rounded</span><span class="p">]</span>
-        <span class="n">hex2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hex_values</span><span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">remainder</span> <span class="o">*</span> <span class="mi">16</span><span class="p">)]</span>
+        <span class="n">hex2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hex_values</span><span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">remainder</span> <span class="o">*</span> <span class="mi">16</span><span class="p">)]</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">hex1</span><span class="p">,</span> <span class="n">hex2</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">return_color_grad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">second_color</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
@@ -14699,17 +14705,32 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
         <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="n">background</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">secondary_background</span> <span class="o">=</span> <span class="n">secondary_background</span>
 
-<span class="n">color2</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">72</span> <span class="p">)</span>
+<span class="n">color2</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">110</span> <span class="p">)</span>
 <span class="n">color1</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">168</span> <span class="p">)</span>
+<span class="n">color3</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">148</span> <span class="p">)</span>
 
-<span class="n">grad</span> <span class="o">=</span> <span class="n">color1</span><span class="o">.</span><span class="n">return_color_grad</span><span class="p">(</span> <span class="n">color2</span><span class="p">,</span> <span class="mi">7</span> <span class="p">)</span>
+<span class="n">smooth_grad</span> <span class="o">=</span> <span class="n">color1</span><span class="o">.</span><span class="n">return_color_grad</span><span class="p">(</span> <span class="n">color3</span><span class="p">,</span> <span class="mi">7</span> <span class="p">)</span>
+<span class="n">grad</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;#C2C6F2&quot;</span><span class="p">,</span> <span class="s2">&quot;#F2D8CE&quot;</span><span class="p">,</span> <span class="s2">&quot;#B6DBF2&quot;</span><span class="p">,</span> <span class="s2">&quot;#F2E09D&quot;</span><span class="p">,</span> <span class="s2">&quot;#AAF2E7&quot;</span><span class="p">,</span> <span class="s2">&quot;#C8F29D&quot;</span><span class="p">,</span> <span class="s2">&quot;#EDC1F3&quot;</span> <span class="p">]</span>
 
 <span class="n">prim</span> <span class="o">=</span> <span class="n">color2</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
 <span class="n">sec</span> <span class="o">=</span>  <span class="n">color</span><span class="p">(</span><span class="mi">148</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">92</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
 <span class="n">back</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">242</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">206</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
 <span class="n">sec_back</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">204</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">163</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
 
-<span class="n">pallet</span> <span class="o">=</span> <span class="n">pallet</span><span class="p">(</span> <span class="n">grad</span><span class="p">,</span> <span class="n">prim</span><span class="p">,</span> <span class="n">sec</span><span class="p">,</span> <span class="n">back</span><span class="p">,</span> <span class="n">sec_back</span>  <span class="p">)</span>
+<span class="n">prim_pallet</span> <span class="o">=</span> <span class="n">pallet</span><span class="p">(</span> <span class="n">grad</span><span class="p">,</span> <span class="n">prim</span><span class="p">,</span> <span class="n">sec</span><span class="p">,</span> <span class="n">back</span><span class="p">,</span> <span class="n">sec_back</span>  <span class="p">)</span>
+
+<span class="n">color1A</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">183</span> <span class="p">)</span>
+<span class="n">color2A</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">97</span> <span class="p">)</span> 
+<span class="n">color3A</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">59</span> <span class="p">)</span>
+
+<span class="n">gradA</span> <span class="o">=</span> <span class="n">color1A</span><span class="o">.</span><span class="n">return_color_grad</span><span class="p">(</span><span class="n">color2A</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> 
+
+<span class="n">primA</span> <span class="o">=</span> <span class="n">color3A</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">secA</span> <span class="o">=</span> <span class="n">color2A</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">backA</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">172</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">194</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">sec_backA</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">166</span> <span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+
+<span class="n">palletA</span> <span class="o">=</span> <span class="n">pallet</span><span class="p">(</span> <span class="n">gradA</span><span class="p">,</span> <span class="n">primA</span><span class="p">,</span> <span class="n">secA</span><span class="p">,</span> <span class="n">backA</span><span class="p">,</span> <span class="n">sec_backA</span> <span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14738,19 +14759,27 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
     <span class="k">return</span> <span class="n">chart</span><span class="o">.</span><span class="n">configure_bar</span><span class="p">(</span>
         <span class="n">cornerRadius</span><span class="o">=</span><span class="mi">5</span>
     <span class="p">)</span><span class="o">.</span><span class="n">configure_range</span> <span class="p">(</span>
-        <span class="n">category</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">grad</span>
+        <span class="n">category</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">grad</span><span class="p">,</span>
+        <span class="n">heatmap</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">grad</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">configure_mark</span><span class="p">(</span>
+        <span class="n">cornerRadius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">stroke</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">primary_color</span><span class="p">,</span>
+        <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">2</span>
     <span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">apply_text</span><span class="p">(</span><span class="n">chart</span><span class="p">,</span> <span class="n">pallet</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">chart</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span>
         <span class="n">font</span><span class="o">=</span><span class="s2">&quot;DINCondensed-Bold&quot;</span><span class="p">,</span>
         <span class="n">background</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">background</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">configure_view</span><span class="p">(</span>
+        <span class="n">strokeWidth</span><span class="o">=</span><span class="mi">0</span>
     <span class="p">)</span><span class="o">.</span><span class="n">configure_axis</span><span class="p">(</span>
         <span class="n">labelFontSize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span>
         <span class="n">titleFontSize</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span>
         <span class="n">labelColor</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">secondary_color</span><span class="p">,</span>
         <span class="n">titleColor</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">primary_color</span><span class="p">,</span>
-        <span class="n">domainColor</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">secondary_background</span><span class="p">,</span>
+        <span class="c1"># domainColor=pallet.secondary_background,</span>
+        <span class="n">domainColor</span><span class="o">=</span><span class="s2">&quot;#FFFFFF00&quot;</span><span class="p">,</span>
         <span class="n">tickColor</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">secondary_background</span><span class="p">,</span>
         <span class="n">gridColor</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">secondary_background</span>
     <span class="p">)</span><span class="o">.</span><span class="n">configure_title</span><span class="p">(</span>
@@ -14767,8 +14796,6 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
         <span class="n">padding</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
         <span class="n">titleColor</span><span class="o">=</span><span class="n">pallet</span><span class="o">.</span><span class="n">primary_color</span><span class="p">,</span>
         <span class="n">titleFontSize</span><span class="o">=</span><span class="mi">15</span>
-
-
     <span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">apply_all</span><span class="p">(</span><span class="n">chart</span><span class="p">,</span> <span class="n">pallet</span><span class="p">):</span>
@@ -14787,8 +14814,11 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="LET-THE-CONFUSION-BEGIN!"><strong>LET THE CONFUSION BEGIN!</strong><a class="anchor-link" href="#LET-THE-CONFUSION-BEGIN!">&#182;</a></h3><h3 id="GRAPH-1"><strong>GRAPH 1</strong><a class="anchor-link" href="#GRAPH-1">&#182;</a></h3><p>When I started to look for ways to present this data in misleading ways, I thought it would be fun to first identify actual patterns that exist, and then attempt to convince viewers of my visualization, the exact opposite.</p>
-<p>This brought me to my first graph, which simply, and accurately displayed the relationship between the target demographic of tweet and its assigned category. The stacked bar chart that I used also enables the comparison of these categories between each other, as well as the difference in total number of tweets in each target audience. Although this is a lot of information, with clear labels I think this is an effective graph that properly demonstrates an array of interesting relationships.</p>
+<h3 id="LET-THE-CONFUSION-BEGIN!"><strong>LET THE CONFUSION BEGIN!</strong><a class="anchor-link" href="#LET-THE-CONFUSION-BEGIN!">&#182;</a></h3><p>For this project, I will be exploring two series of visualizations, comprised of the various iterations I put them through to make them worse! When first considering what would make for the worst visualization, I found two keys categories, ine is the content orientation / presentation, and the other is the pure visuals of the graph. The later is fairly easy to tamper with; low contrast and poor colors already lead to a pretty horrendous visualization, so I spent most of the time focussed on the former. This lead me to the conclusion: to make the most misleading visualization, that presents wholly incorrect patterns, I must first identify the actual patterns that exist, and then attempt to convince viewers of my visualization, the exact opposite.</p>
+<p>And so starts that journey:</p>
+<hr>
+<h3 id="ITERATION-1"><strong>ITERATION 1</strong><a class="anchor-link" href="#ITERATION-1">&#182;</a></h3><hr>
+<h5 id="VIS-1"><strong>VIS 1</strong><a class="anchor-link" href="#VIS-1">&#182;</a></h5><p>I thought it would be interesting to look at the relationship between the number of tweets in a certain category, and what their target audience is. After trying out some graph marks I settled on a stacked column chart, as it best conveys that each target audience is being broken down into content categories. This allows for the comparison of categories between each other, as well as the difference in total number of tweets in each target audience. Although this is a lot of information, with clear labels I think this is an effective graph that properly demonstrates an array of interesting relationships.</p>
 <p><strong>But that is not what we are here for.</strong></p>
 
 </div>
@@ -14810,7 +14840,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <span class="p">)</span>
 
 
-<span class="n">apply_all</span><span class="p">(</span><span class="n">unequal</span><span class="p">,</span> <span class="n">pallet</span><span class="p">)</span>
+<span class="n">apply_all</span><span class="p">(</span><span class="n">unequal</span><span class="p">,</span> <span class="n">prim_pallet</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14834,13 +14864,13 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-28024b78e9584d1b9c28c93c05c605d6"></div>
+<div id="altair-viz-b44d903eefd34572a8a612143bf43a1f"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-28024b78e9584d1b9c28c93c05c605d6") {
-      outputDiv = document.getElementById("altair-viz-28024b78e9584d1b9c28c93c05c605d6");
+    if (outputDiv.id !== "altair-viz-b44d903eefd34572a8a612143bf43a1f") {
+      outputDiv = document.getElementById("altair-viz-b44d903eefd34572a8a612143bf43a1f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -14886,7 +14916,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "axis": {"domainColor": "#CCB9A3", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#782648", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#782648", "labelFontSize": 13, "padding": 10, "titleColor": "#782648", "titleFontSize": 15}, "range": {"category": ["#A46DA8", "#9D6198", "#955588", "#8E4A78", "#873E68", "#7F3258", "#782648"]}, "title": {"color": "#782648", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "value", "title": "Number of Tweets", "type": "quantitative"}}, "title": "The categorical breakdown of different target audiences", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#7D556E", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#7D556E", "labelFontSize": 13, "padding": 10, "titleColor": "#7D556E", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#7D556E", "strokeWidth": 2}, "range": {"category": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"], "heatmap": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"]}, "title": {"color": "#7D556E", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "value", "title": "Number of Tweets", "type": "quantitative"}}, "title": "The categorical breakdown of different target audiences", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -14900,16 +14930,134 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="GRAPH-2"><strong>GRAPH 2</strong><a class="anchor-link" href="#GRAPH-2">&#182;</a></h3><p>The next graph displays a similar set of data, however, instead of displaying the number of tweets for each category, it looks at that number as a percentage of the total number of tweets in that target audience. Which despite being a mouthful, creates a <strong>great lack of clarity</strong> in three important ways</p>
+<h5 id="VIS-2"><strong>VIS 2</strong><a class="anchor-link" href="#VIS-2">&#182;</a></h5><p>For this second visualization I searched for a mark that implicitly made the content of this visualization hard to read. While I dug around with the visual variables, color, in the form of a heat map, I found, was terrible for conveying numerical data and was difficult to compare to other cells if they were not adjacent, making this graph:</p>
 <ol>
-<li>It now <em>appears</em> as if the number of tweets in the neutral and partisan audiences are equal, which is <strong>certainly not the case</strong></li>
+<li>not quantitative</li>
+<li>not really associative or selective</li>
+<li>and with terrible length</li>
 </ol>
+<p>I also find that the heatmap, especially for this data set, is very unintuitive, as the pattern the colors form means nothing, and all the axes are qualitative, which is typically not the case for heatmaps</p>
+<p><strong>Off to a great start.</strong></p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unequal_heatMap</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span> <span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span> <span class="s2">&quot;bias-trun&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Target Audience&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Category of Tweet Content&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;number of Tweets&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The categorical breakdown of different target audiences&quot;</span>
+<span class="p">)</span>
+
+<span class="n">apply_all</span><span class="p">(</span><span class="n">unequal_heatMap</span><span class="p">,</span> <span class="n">palletA</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<div id="altair-viz-0476b617e2d140aba35acacc5d78fb00"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-0476b617e2d140aba35acacc5d78fb00") {
+      outputDiv = document.getElementById("altair-viz-0476b617e2d140aba35acacc5d78fb00");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#909DA6", "labelColor": "#354F61", "labelFontSize": 13, "tickColor": "#909DA6", "titleColor": "#192D3B", "titleFontSize": 25}, "background": "#ACB9C2", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#909DA6", "labelColor": "#192D3B", "labelFontSize": 13, "padding": 10, "titleColor": "#192D3B", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#192D3B", "strokeWidth": 2}, "range": {"category": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"], "heatmap": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"]}, "title": {"color": "#192D3B", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "rect", "encoding": {"color": {"field": "value", "title": "number of Tweets", "type": "quantitative"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "category", "title": "Category of Tweet Content", "type": "nominal"}}, "title": "The categorical breakdown of different target audiences", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="ITERATION-2"><strong>ITERATION 2</strong><a class="anchor-link" href="#ITERATION-2">&#182;</a></h3><hr>
+<p>The next iteration of these visualizations display a similar set of data, however, instead of displaying the number of tweets for each category, it looks at that number as a percentage of the total number of tweets in that target audience. Which despite being a mouthful, creates a <strong>great lack of clarity</strong> in two important ways</p>
 <ol>
-<li>Because the data the graph is conveying is now a percent, viewers must first understand that it is indeed a percent, instead of naturally assuming the values are directly the number of tweets in a category, but also they must understand what both the part and whole are before they can truly understand what they are reading! <strong>oh-ho! how terrible and tragic!</strong></li>
+<li>Because the data the graph is conveying is now a percent, viewers must first understand that it is indeed a percent, instead of naturally assuming the values are directly the number of tweets in a category. Furthermore, they must also understand what both the part and whole are before they can understand what they are reading! <strong>oh-ho! how terrible and tragic!</strong></li>
 </ol>
 <ol>
 <li>The labels now must try to explain this complex relationship, so they have become longer  and so <em>so</em> much worse. <strong>:)</strong></li>
 </ol>
+<hr>
+<h5 id="VIS-1"><strong>VIS 1</strong><a class="anchor-link" href="#VIS-1">&#182;</a></h5><p>Transforming the data is most impactful for this visualization because of its ability to convey the total number of tweets in a target audience by the total height of a bar. However, by making all the internal categories percentages of the whole, they add up to 100%, instead of the total number of tweets. So, it now <em>appears</em> as if the number of tweets in the neutral and partisan audiences are equal, which is <strong>certainly not the case</strong></p>
 
 </div>
 </div>
@@ -14929,7 +15077,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The categorical breakdown of different target audiences, normalized&quot;</span>
 <span class="p">)</span>
 
-<span class="n">apply_all</span><span class="p">(</span><span class="n">equal</span><span class="p">,</span> <span class="n">pallet</span><span class="p">)</span>
+<span class="n">apply_all</span><span class="p">(</span><span class="n">equal</span><span class="p">,</span> <span class="n">prim_pallet</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14953,13 +15101,13 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-6d431e1f94a44bfa9c224ca58ab8173d"></div>
+<div id="altair-viz-a966102fbde94e80a1817cd4352469a9"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6d431e1f94a44bfa9c224ca58ab8173d") {
-      outputDiv = document.getElementById("altair-viz-6d431e1f94a44bfa9c224ca58ab8173d");
+    if (outputDiv.id !== "altair-viz-a966102fbde94e80a1817cd4352469a9") {
+      outputDiv = document.getElementById("altair-viz-a966102fbde94e80a1817cd4352469a9");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15005,7 +15153,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "axis": {"domainColor": "#CCB9A3", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#782648", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#782648", "labelFontSize": 13, "padding": 10, "titleColor": "#782648", "titleFontSize": 15}, "range": {"category": ["#A46DA8", "#9D6198", "#955588", "#8E4A78", "#873E68", "#7F3258", "#782648"]}, "title": {"color": "#782648", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "perc", "title": "number of tweets in a category over total tweets", "type": "quantitative"}}, "title": "The categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#7D556E", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#7D556E", "labelFontSize": 13, "padding": 10, "titleColor": "#7D556E", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#7D556E", "strokeWidth": 2}, "range": {"category": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"], "heatmap": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"]}, "title": {"color": "#7D556E", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "perc", "title": "number of tweets in a category over total tweets", "type": "quantitative"}}, "title": "The categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -15019,9 +15167,124 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="GRAPH-3"><strong>GRAPH 3</strong><a class="anchor-link" href="#GRAPH-3">&#182;</a></h3><p>At this point I realized I wanted to make it seem that attacking tweets were the most popular, when in actuality they are barely a category at all. To go about this, I was consdierng many ways of presenting the data, but all of them seemed <strong>just too readable!</strong> So instead settled for a good old fashion data transformation:</p>
+<h5 id="VIS-2"><strong>VIS 2</strong><a class="anchor-link" href="#VIS-2">&#182;</a></h5><p>Changing the data around does not do too much damage to this visualization, however it does make the labels on the heatmap legend feel even more arbitrary <em>( 58? what does that even mean )</em>, and the label, to avoid being truncated, must be reduced to such a complexity that it makes no sense.</p>
+<p><strong>and this is just iteration 2!</strong></p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">equal_heatmap</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span> <span class="s2">&quot;bias-trun&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Target Audience&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Category of Tweet Content&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="s2">&quot;perc:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Tweet # in category / total tweets &quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The categorical breakdown of different target audiences, normalized&quot;</span>
+<span class="p">)</span>
+
+<span class="n">apply_all</span><span class="p">(</span><span class="n">equal_heatmap</span><span class="p">,</span> <span class="n">palletA</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<div id="altair-viz-7db486b6c30b432697cf444908f0341b"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-7db486b6c30b432697cf444908f0341b") {
+      outputDiv = document.getElementById("altair-viz-7db486b6c30b432697cf444908f0341b");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#909DA6", "labelColor": "#354F61", "labelFontSize": 13, "tickColor": "#909DA6", "titleColor": "#192D3B", "titleFontSize": 25}, "background": "#ACB9C2", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#909DA6", "labelColor": "#192D3B", "labelFontSize": 13, "padding": 10, "titleColor": "#192D3B", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#192D3B", "strokeWidth": 2}, "range": {"category": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"], "heatmap": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"]}, "title": {"color": "#192D3B", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "rect", "encoding": {"color": {"field": "perc", "title": "Tweet # in category / total tweets ", "type": "quantitative"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "category", "title": "Category of Tweet Content", "type": "nominal"}}, "title": "The categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="ITERATION-3"><strong>ITERATION 3</strong><a class="anchor-link" href="#ITERATION-3">&#182;</a></h3><hr>
+<p>At this point I realized I had good graphs and was able to determine: <strong>almost NO ONE posted angry tweets this day</strong> which I felt was quite disappointing. <strong>!HOWEVER!</strong> through the magic of manipulation <em>we can change that,</em> and so I set out to make the number of attacking tweets seem like a majority! To go about this I played with many marks, orientations, and axis names, but in the end, all of them seemed <strong>just too readable!</strong> So instead I settled for a good old fashion data transformation:</p>
 <h4 id="ENTER-IN-THE-MAGICAL-1-/-X"><strong>ENTER IN THE MAGICAL 1 / X</strong><a class="anchor-link" href="#ENTER-IN-THE-MAGICAL-1-/-X">&#182;</a></h4><p>I decided what better way to make the data and trends of a graph more clear than to just invert all the numbers!</p>
-<p>And so, that is exactly what I did! The following graph, an "inversion" of the first graph,  does not just present the data relationships completely  backward, but it <strong>certainly does not make it clear what transformation I used to get the data to that point :))</strong></p>
+<p>And so, that is exactly what I did! This iteration, an "inversion" of the first,  does not just present the data relationships completely  backward, but it <strong>certainly does not make it clear what transformation I used to get the data to that point :))</strong></p>
+<hr>
+<h5 id="VIS-1"><strong>VIS 1</strong><a class="anchor-link" href="#VIS-1">&#182;</a></h5><p>The confusion is most evident with this visualization, as it is fairly common to make the assumption that "big bar = more thing". However, that is exactly the trap I want the reader to fall in, for it is actually the microscopic slivers that display the most tweets! <strong>how lovely!</strong></p>
 
 </div>
 </div>
@@ -15041,7 +15304,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The inverted categorical breakdown of different target audiences&quot;</span>
 <span class="p">)</span>
 
-<span class="n">apply_all</span><span class="p">(</span><span class="n">unequal_misleading</span><span class="p">,</span> <span class="n">pallet</span><span class="p">)</span>
+<span class="n">apply_all</span><span class="p">(</span><span class="n">unequal_misleading</span><span class="p">,</span> <span class="n">prim_pallet</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15065,13 +15328,13 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-d6f9b347a5ed4f6291a7298565673732"></div>
+<div id="altair-viz-18ff1e91ca78456e80eee11e4863dcdc"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d6f9b347a5ed4f6291a7298565673732") {
-      outputDiv = document.getElementById("altair-viz-d6f9b347a5ed4f6291a7298565673732");
+    if (outputDiv.id !== "altair-viz-18ff1e91ca78456e80eee11e4863dcdc") {
+      outputDiv = document.getElementById("altair-viz-18ff1e91ca78456e80eee11e4863dcdc");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15117,7 +15380,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "axis": {"domainColor": "#CCB9A3", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#782648", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#782648", "labelFontSize": 13, "padding": 10, "titleColor": "#782648", "titleFontSize": 15}, "range": {"category": ["#A46DA8", "#9D6198", "#955588", "#8E4A78", "#873E68", "#7F3258", "#782648"]}, "title": {"color": "#782648", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "invert", "title": "Number of tweets in a category, inverted", "type": "quantitative"}}, "title": "The inverted categorical breakdown of different target audiences", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#7D556E", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#7D556E", "labelFontSize": 13, "padding": 10, "titleColor": "#7D556E", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#7D556E", "strokeWidth": 2}, "range": {"category": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"], "heatmap": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"]}, "title": {"color": "#7D556E", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "invert", "title": "Number of tweets in a category, inverted", "type": "quantitative"}}, "title": "The inverted categorical breakdown of different target audiences", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -15131,12 +15394,124 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="GRAPH-4"><strong>GRAPH 4</strong><a class="anchor-link" href="#GRAPH-4">&#182;</a></h3><p>and to top it all off, I though why not just Frankenstein the last two graphs together, so I had the inverted number of tweets of a certain category, in a certain target audience as a percentage out of the sum of all the inverted numbers of tweets in these categories.<strong>PERFECT</strong></p>
-<p>secretive: check</p>
-<p>misleading and overly long titles: check</p>
-<p>making the wrong assumptions easy and intuitive to assume: check</p>
-<p>difficult to get the actual data from the graph: CHECK!</p>
-<p>This graph perfectly combines all the terrible practices of rendering data into one, horrible, impossibly challenging data visualization. <strong>ENJOY!</strong></p>
+<h5 id="VIS-2"><strong>VIS 2</strong><a class="anchor-link" href="#VIS-2">&#182;</a></h5><p>This visualization is largely unaffected because it was already <strong><em>so</em></strong> unintuitive from the start. But I suppose it is still confusing, once the reader relates dark color = higher number, to then understand the distinction that higher number != more tweets!</p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inverted_heatmap</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span> <span class="s2">&quot;bias-trun&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Target Audience&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Category of Tweet Content&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="s2">&quot;invert:Q&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;# of tweets in a category, inverted&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The inverted categorical breakdown of different target audiences&quot;</span>
+<span class="p">)</span>
+
+<span class="n">apply_all</span><span class="p">(</span><span class="n">inverted_heatmap</span><span class="p">,</span> <span class="n">palletA</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<div id="altair-viz-c46f2307f09d45e58ebaa6bf770f902f"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-c46f2307f09d45e58ebaa6bf770f902f") {
+      outputDiv = document.getElementById("altair-viz-c46f2307f09d45e58ebaa6bf770f902f");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#909DA6", "labelColor": "#354F61", "labelFontSize": 13, "tickColor": "#909DA6", "titleColor": "#192D3B", "titleFontSize": 25}, "background": "#ACB9C2", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#909DA6", "labelColor": "#192D3B", "labelFontSize": 13, "padding": 10, "titleColor": "#192D3B", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#192D3B", "strokeWidth": 2}, "range": {"category": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"], "heatmap": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"]}, "title": {"color": "#192D3B", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "rect", "encoding": {"color": {"field": "invert", "title": "# of tweets in a category, inverted", "type": "quantitative"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "category", "title": "Category of Tweet Content", "type": "nominal"}}, "title": "The inverted categorical breakdown of different target audiences", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h3 id="GRAPH-4"><strong>GRAPH 4</strong><a class="anchor-link" href="#GRAPH-4">&#182;</a></h3><hr>
+<p>Finally, it was time to Frankenstein the last two iterations together, so I had the inverted number of tweets of a certain category, in a certain target audience as a percentage out of the sum of all the inverted numbers of tweets in these categories.<strong>PERFECT</strong></p>
+<p><strong>secretive:</strong> check ✅</p>
+<p><strong>misleading and overly long titles:</strong> check ✅</p>
+<p><strong>making the wrong assumptions easy and intuitive to assume:</strong> check ✅</p>
+<p><strong>difficult to get the actual data from the graph:</strong> CHECK! ✅✅✅✅</p>
+<p>This graph perfectly combines all the terrible practices of rendering data into one, horrible, impossibly challenging data visualization.</p>
 
 </div>
 </div>
@@ -15156,7 +15531,7 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The inverted categorical breakdown of different target audiences, normalized&quot;</span>
 <span class="p">)</span>
 
-<span class="n">apply_all</span><span class="p">(</span><span class="n">equal_misleading</span><span class="p">,</span> <span class="n">pallet</span><span class="p">)</span>
+<span class="n">apply_all</span><span class="p">(</span><span class="n">equal_misleading</span><span class="p">,</span> <span class="n">prim_pallet</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15180,13 +15555,13 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-<div id="altair-viz-1bbcc66b949144418a3cef5d09acc6e6"></div>
+<div id="altair-viz-537b3abd9c16443796ac39a8b1d7845b"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-1bbcc66b949144418a3cef5d09acc6e6") {
-      outputDiv = document.getElementById("altair-viz-1bbcc66b949144418a3cef5d09acc6e6");
+    if (outputDiv.id !== "altair-viz-537b3abd9c16443796ac39a8b1d7845b") {
+      outputDiv = document.getElementById("altair-viz-537b3abd9c16443796ac39a8b1d7845b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -15232,7 +15607,343 @@ The full data set can be found <a href="https://www.kaggle.com/yamqwe/classifica
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "axis": {"domainColor": "#CCB9A3", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#782648", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#782648", "labelFontSize": 13, "padding": 10, "titleColor": "#782648", "titleFontSize": 15}, "range": {"category": ["#A46DA8", "#9D6198", "#955588", "#8E4A78", "#873E68", "#7F3258", "#782648"]}, "title": {"color": "#782648", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "invert-perc", "title": "inverted number of tweets in a category over total tweets", "type": "quantitative"}}, "title": "The inverted categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#CCB9A3", "labelColor": "#94345C", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#7D556E", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#7D556E", "labelFontSize": 13, "padding": 10, "titleColor": "#7D556E", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#7D556E", "strokeWidth": 2}, "range": {"category": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"], "heatmap": ["#C2C6F2", "#F2D8CE", "#B6DBF2", "#F2E09D", "#AAF2E7", "#C8F29D", "#EDC1F3"]}, "title": {"color": "#7D556E", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "invert-perc", "title": "inverted number of tweets in a category over total tweets", "type": "quantitative"}}, "title": "The inverted categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inverted_equal_heatmap</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span> <span class="s2">&quot;bias-trun&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Target Audience&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Category of Tweet Content&quot;</span> <span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="s2">&quot;invert-perc&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;inverted tweet # in category / total&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The inverted categorical breakdown of different target audiences, normalized&quot;</span>
+<span class="p">)</span>
+
+<span class="n">apply_all</span><span class="p">(</span><span class="n">inverted_equal_heatmap</span><span class="p">,</span> <span class="n">palletA</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<div id="altair-viz-7386ea21e45b4e98a5047d07d2b564ca"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-7386ea21e45b4e98a5047d07d2b564ca") {
+      outputDiv = document.getElementById("altair-viz-7386ea21e45b4e98a5047d07d2b564ca");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#909DA6", "labelColor": "#354F61", "labelFontSize": 13, "tickColor": "#909DA6", "titleColor": "#192D3B", "titleFontSize": 25}, "background": "#ACB9C2", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#909DA6", "labelColor": "#192D3B", "labelFontSize": 13, "padding": 10, "titleColor": "#192D3B", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#192D3B", "strokeWidth": 2}, "range": {"category": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"], "heatmap": ["#B6CFB7", "#A0B9A8", "#8BA49A", "#758F8C", "#60797D", "#4A646F", "#354F61"]}, "title": {"color": "#192D3B", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "rect", "encoding": {"color": {"field": "invert-perc", "title": "inverted tweet # in category / total", "type": "quantitative"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "category", "title": "Category of Tweet Content", "type": "nominal"}}, "title": "The inverted categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>and last but <em>certainly</em> not least: a fresh coat of the worst paint possible is the cherry on top!</p>
+<p>So I just went ahead and mixed the least contrasty-colors, and made all the color ranges tiny, to make sure that no reader can even attempt to understand this nightmare :)</p>
+<p><strong><em>ENJOY :)</em></strong></p>
+
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gradColor</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">152</span> <span class="p">)</span>
+<span class="n">gradColor2</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">104</span> <span class="p">)</span>
+<span class="n">grad</span> <span class="o">=</span> <span class="n">gradColor</span><span class="o">.</span><span class="n">return_color_grad</span><span class="p">(</span><span class="n">gradColor2</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="n">prim</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">217</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span> <span class="mi">173</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">sec</span> <span class="o">=</span>  <span class="n">color</span><span class="p">(</span><span class="mi">217</span><span class="p">,</span> <span class="mi">197</span><span class="p">,</span> <span class="mi">173</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">back</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">242</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">206</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">sec_back</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">204</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">163</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+
+<span class="n">prim_pallet</span> <span class="o">=</span> <span class="n">pallet</span><span class="p">(</span> <span class="n">grad</span><span class="p">,</span> <span class="n">prim</span><span class="p">,</span> <span class="n">sec</span><span class="p">,</span> <span class="n">back</span><span class="p">,</span> <span class="n">sec_back</span>  <span class="p">)</span>
+
+<span class="n">gradColor</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">69</span> <span class="p">)</span>
+<span class="n">gradColor2</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">99</span> <span class="p">)</span> 
+
+<span class="n">grad</span> <span class="o">=</span> <span class="n">gradColor</span><span class="o">.</span><span class="n">return_color_grad</span><span class="p">(</span><span class="n">gradColor2</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> 
+
+<span class="n">prim</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">204</span> <span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">sec</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">204</span> <span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">back</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="mi">172</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">194</span><span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+<span class="n">sec_back</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">166</span> <span class="p">)</span><span class="o">.</span><span class="n">return_color_in</span><span class="p">(</span><span class="s2">&quot;HEX&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">apply_all</span><span class="p">(</span><span class="n">equal_misleading</span><span class="p">,</span> <span class="n">prim_pallet</span><span class="p">)</span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<div id="altair-viz-a02dd6e0cf8446b79374c07ebc8a3928"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-a02dd6e0cf8446b79374c07ebc8a3928") {
+      outputDiv = document.getElementById("altair-viz-a02dd6e0cf8446b79374c07ebc8a3928");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#CCB9A3", "labelColor": "#D9C5AD", "labelFontSize": 13, "tickColor": "#CCB9A3", "titleColor": "#D9C5AD", "titleFontSize": 25}, "background": "#F2E1CE", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#CCB9A3", "labelColor": "#D9C5AD", "labelFontSize": 13, "padding": 10, "titleColor": "#D9C5AD", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#D9C5AD", "strokeWidth": 2}, "range": {"category": ["#EBC498", "#E1BB90", "#D7B288", "#CDA980", "#C3A078", "#B99770", "#B08E68"], "heatmap": ["#EBC498", "#E1BB90", "#D7B288", "#CDA980", "#C3A078", "#B99770", "#B08E68"]}, "title": {"color": "#D9C5AD", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "bar", "encoding": {"color": {"field": "category", "type": "nominal"}, "x": {"field": "bias-trun", "title": "target Audience", "type": "nominal"}, "y": {"field": "invert-perc", "title": "inverted number of tweets in a category over total tweets", "type": "quantitative"}}, "title": "The inverted categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prim_pallet</span> <span class="o">=</span> <span class="n">pallet</span><span class="p">(</span> <span class="n">grad</span><span class="p">,</span> <span class="n">prim</span><span class="p">,</span> <span class="n">sec</span><span class="p">,</span> <span class="n">back</span><span class="p">,</span> <span class="n">sec_back</span> <span class="p">)</span>
+<span class="n">apply_all</span><span class="p">(</span><span class="n">inverted_equal_heatmap</span><span class="p">,</span> <span class="n">prim_pallet</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+<div id="altair-viz-e4f96d215efd41758acbdc7276a168c9"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-e4f96d215efd41758acbdc7276a168c9") {
+      outputDiv = document.getElementById("altair-viz-e4f96d215efd41758acbdc7276a168c9");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"domainColor": "#FFFFFF00", "gridColor": "#909DA6", "labelColor": "#B8C4CC", "labelFontSize": 13, "tickColor": "#909DA6", "titleColor": "#B8C4CC", "titleFontSize": 25}, "background": "#ACB9C2", "bar": {"cornerRadius": 5}, "font": "DINCondensed-Bold", "legend": {"cornerRadius": 10, "fillColor": "#909DA6", "labelColor": "#B8C4CC", "labelFontSize": 13, "padding": 10, "titleColor": "#B8C4CC", "titleFontSize": 15}, "mark": {"cornerRadius": 5, "stroke": "#B8C4CC", "strokeWidth": 2}, "range": {"category": ["#242C45", "#252E4A", "#26304F", "#273254", "#283459", "#29365E", "#2A3863"], "heatmap": ["#242C45", "#252E4A", "#26304F", "#273254", "#283459", "#29365E", "#2A3863"]}, "title": {"color": "#B8C4CC", "fontSize": 30}}, "data": {"name": "data-b18f56463b49e574ace535444f5bfcab"}, "mark": "rect", "encoding": {"color": {"field": "invert-perc", "title": "inverted tweet # in category / total", "type": "quantitative"}, "x": {"field": "bias-trun", "title": "Target Audience", "type": "nominal"}, "y": {"field": "category", "title": "Category of Tweet Content", "type": "nominal"}}, "title": "The inverted categorical breakdown of different target audiences, normalized", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-b18f56463b49e574ace535444f5bfcab": [{"bias-trun": "partisan", "category": "policy", "value": 706, "perc": 58.34710743801653, "invert": 0.00141643059490085, "invert-perc": 1.1048900076666275, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "attack", "value": 160, "perc": 13.223140495867769, "invert": 0.00625, "invert-perc": 4.875327158828993, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "information", "value": 82, "perc": 6.776859504132231, "invert": 0.012195121951219513, "invert-perc": 9.51283348064194, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total=", "Unnamed: 9": 5000.0}, {"bias-trun": "partisan", "category": "mobilization", "value": 39, "perc": 3.2231404958677685, "invert": 0.02564102564102564, "invert-perc": 20.001342190067664, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan total=", "Unnamed: 9": 1210.0}, {"bias-trun": "partisan", "category": "support", "value": 170, "perc": 14.049586776859504, "invert": 0.0058823529411764705, "invert-perc": 4.58854320830964, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral total=", "Unnamed: 9": 2499.0}, {"bias-trun": "partisan", "category": "constituency", "value": 23, "perc": 1.9008264462809916, "invert": 0.043478260869565216, "invert-perc": 33.915319365766905, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "partisan", "category": "media", "value": 30, "perc": 2.479338842975207, "invert": 0.03333333333333333, "invert-perc": 26.00174484708796, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "total-inv", "Unnamed: 9": 0.23896139989961954}, {"bias-trun": "neutral", "category": "policy", "value": 705, "perc": 28.211284513805523, "invert": 0.0014184397163120568, "invert-perc": 1.2805862113888151, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "partisan inv", "Unnamed: 9": 0.12819652533122103}, {"bias-trun": "neutral", "category": "attack", "value": 12, "perc": 0.4801920768307323, "invert": 0.08333333333333333, "invert-perc": 75.23443991909288, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": "neutral inv", "Unnamed: 9": 0.11076487456839845}, {"bias-trun": "neutral", "category": "information", "value": 565, "perc": 22.60904361744698, "invert": 0.0017699115044247787, "invert-perc": 1.5978996089010877, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "mobilization", "value": 90, "perc": 3.601440576230492, "invert": 0.011111111111111112, "invert-perc": 10.031258655879052, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "support", "value": 751, "perc": 30.05202080832333, "invert": 0.0013315579227696406, "invert-perc": 1.2021481744728557, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "constituency", "value": 129, "perc": 5.162064825930372, "invert": 0.007751937984496124, "invert-perc": 6.998552550613292, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}, {"bias-trun": "neutral", "category": "media", "value": 247, "perc": 9.883953581432573, "invert": 0.004048582995951417, "invert-perc": 3.655114489996415, "Unnamed: 6": null, "Unnamed: 7": null, "Unnamed: 8": null, "Unnamed: 9": null}]}}, {"mode": "vega-lite"});
 </script>
 </div>
 

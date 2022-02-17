@@ -9,3 +9,4 @@
 2. [minor 2:]( https://github.com/Brian-Masse/comparison-magical ) magical comparison 
 3. [minor 3:]( https://github.com/Brian-Masse/comparison-slope ) comparison  slope
 4. [minor 4:]( https://github.com/Brian-Masse/Reddit-Comments ) comparison  experimental
+5. [minor 5:]( https://github.com/Brian-Masse/Rain-Distribution-Visualization ) Distributions physical

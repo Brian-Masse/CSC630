@@ -11,3 +11,5 @@
 4. [minor 4:]( https://github.com/Brian-Masse/Reddit-Comments ) comparison  experimental
 5. [minor 5:]( https://github.com/Brian-Masse/Rain-Distribution-Visualization ) Distributions physical
 6. [minor 6:]( https://github.com/Brian-Masse/Animals-life-expectancy ) Distributions Animal
+7. [minor 7:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/blob/main/README.md ) Distributions Analysts
+

@@ -12,4 +12,5 @@
 5. [minor 5:]( https://github.com/Brian-Masse/Rain-Distribution-Visualization ) Distributions physical
 6. [minor 6:]( https://github.com/Brian-Masse/Animals-life-expectancy ) Distributions Animal
 7. [minor 7:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization ) Distributions Analysts
+8. [minor 8:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20II ) Distribution Strips
 

@@ -14,4 +14,4 @@
 7. [minor 7:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization ) Distributions Analysts
 8. [minor 8:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20II ) Distribution Strips
 9. [minor 9:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20III ) Distribution Circular
-
+10.[minor 10:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20VI ) Realtionships Correlation 

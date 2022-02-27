@@ -15,4 +15,4 @@
 8. [minor 8:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20II ) Distribution Strips
 9. [minor 9:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20III ) Distribution Circular
 10. [minor 10:]( https://github.com/Brian-Masse/Coffee-Chain-Visualization/tree/main/PART%20IV ) Realtionships Correlation 
-11. [minor 10:]( https://github.com/Brian-Masse/Invesco-Monthly-preformance-Vis ) Realtionships Multivariate
+11. [minor 11:]( https://github.com/Brian-Masse/Invesco-Monthly-preformance-Vis ) Realtionships Multivariate
